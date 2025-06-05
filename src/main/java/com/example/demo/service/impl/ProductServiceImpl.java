@@ -6,6 +6,8 @@ import com.example.demo.repository.ProductRepository;
 import com.example.demo.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,5 +65,12 @@ public class ProductServiceImpl implements ProductService {
         Product product = productRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Product not found"));
         productRepository.delete(product);
+    }
+
+    @Override
+    public Page<ProductDTO> searchProducts(String keyword, int page, int size) {
+        Page<Product> productPage = productRepository
+            .findByNameContainingOrDescriptionContaining(keyword, keyword, PageRequest.of(page, size));
+        return productPage.map(product -> modelMapper.map(product, ProductDTO.class));
     }
 }

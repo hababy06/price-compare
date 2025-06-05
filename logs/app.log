@@ -1,0 +1,43 @@
+2025-06-05T11:44:40.128+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Starting PriceCompareApplication using Java 22.0.1 with PID 22480 (C:\eclipse-workspace\price-compare\target\classes started by user in C:\eclipse-workspace\price-compare)
+2025-06-05T11:44:40.130+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-05T11:44:40.196+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-05T11:44:40.196+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-05T11:44:41.117+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-05T11:44:41.201+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interface.
+2025-06-05T11:44:41.945+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-05T11:44:41.968+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-05T11:44:41.969+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-05T11:44:42.048+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-05T11:44:42.048+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1851 ms
+2025-06-05T11:44:42.274+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-05T11:44:42.366+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-05T11:44:42.421+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-05T11:44:42.849+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-05T11:44:42.895+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-05T11:44:43.132+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c63cb67
+2025-06-05T11:44:43.135+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-05T11:44:43.267+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-05T11:44:44.279+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-05T11:44:44.940+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T11:44:45.454+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-06-05T11:44:45.850+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-05T11:44:45.904+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-05T11:44:45.913+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Started PriceCompareApplication in 6.427 seconds (process running for 7.223)
+2025-06-05T11:44:54.761+08:00  INFO 22480 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-05T11:44:54.761+08:00  INFO 22480 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-05T11:44:54.762+08:00  INFO 22480 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-05T11:48:23.625+08:00  INFO 22480 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-05T11:48:23.637+08:00  INFO 22480 --- [springboot-jpa] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-05T11:48:23.648+08:00  INFO 22480 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-05T11:48:23.656+08:00  INFO 22480 --- [springboot-jpa] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T11:48:23.663+08:00  INFO 22480 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-05T11:48:23.677+08:00  INFO 22480 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-05T11:48:23.785+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Starting PriceCompareApplication using Java 22.0.1 with PID 22480 (C:\eclipse-workspace\price-compare\target\classes started by user in C:\eclipse-workspace\price-compare)
+2025-06-05T11:48:23.785+08:00  INFO 22480 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : No active profile set, falling back to 1 default profile: "default"

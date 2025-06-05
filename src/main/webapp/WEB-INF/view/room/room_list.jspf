@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- Jakarta JSTL 表單標籤 -->
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>      
+<div class="pure-form">
+	<fieldset>
+		<legend>Room 列表</legend>
+		<table class="pure-table pure-table-bordered">
+			<thead>
+				<tr><th>房號</th><th>名稱</th><th>人數</th><th>編輯</th><th>刪除</th></tr>
+			</thead>
+			<tbody>
+				<c:forEach var="roomDto" items="${ roomDtos }">
+					<tr>
+						<td>${ roomDto.roomId }</td>
+						<td>${ roomDto.roomName }</td>
+						<td>${ roomDto.roomSize }</td>
+						<td><a class="button-success pure-button" href="/room/${ roomDto.roomId }">編輯</a></td>
+						<td>
+							<form method="post" action="/room/delete/${ roomDto.roomId }">
+								<input type="hidden" name="_method" value="DELETE" />
+								<button type="submit" class="button-error pure-button" >刪除</button>
+							</form>
+						</td>
+					</tr>	
+				</c:forEach>
+			</tbody>
+		</table>
+	</fieldset>
+</div>
+    

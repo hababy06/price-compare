@@ -1,22 +1,23 @@
 package com.example.demo.model.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
+@Schema(description = "商品 DTO")
 public class ProductDTO {
+    @Schema(description = "商品ID", example = "1")
     private Long id;
 
-    @NotBlank(message = "Barcode 不可為空")
-    @Size(max = 30, message = "Barcode 長度不可超過 30 字元")
+    @Schema(description = "商品條碼", example = "4712345678901")
     private String barcode;
 
-    @NotBlank(message = "商品名稱不可為空")
-    @Size(max = 50, message = "商品名稱長度不可超過 50 字元")
+    @Schema(description = "商品名稱", example = "蘋果手機")
     private String name;
 
+    @Schema(description = "商品描述", example = "最新款智慧型手機")
     private String description;
 
+    @Schema(description = "商品圖片網址", example = "https://example.com/product/image.jpg")
     private String imageUrl;
 }

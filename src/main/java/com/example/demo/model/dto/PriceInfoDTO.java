@@ -12,11 +12,11 @@ public class PriceInfoDTO {
     @Schema(description = "價格資訊ID", example = "1001")
     private Long id;
 
-    @Schema(description = "商品ID", example = "10")
-    private Long productId;
+    @Schema(description = "商品名稱", example = "可樂")
+    private String productName;
 
-    @Schema(description = "商店ID", example = "5")
-    private Long storeId;
+    @Schema(description = "商店名稱", example = "7-11")
+    private String storeName;
 
     @Schema(description = "價格", example = "99.99")
     private BigDecimal price;

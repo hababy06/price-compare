@@ -1,4 +1,5 @@
 package com.example.demo.model.entity;
+
 import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -36,6 +37,13 @@ public class Product {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
+
+    // <<<< 加這個建構子，支援 new Product(barcode, name, description)
+    public Product(String barcode, String name, String description) {
+        this.barcode = barcode;
+        this.name = name;
+        this.description = description;
+    }
 
     @PrePersist
     protected void onCreate() {

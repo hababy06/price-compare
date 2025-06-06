@@ -8,7 +8,6 @@ import com.example.demo.repository.PriceInfoRepository;
 import com.example.demo.repository.ProductRepository;
 import com.example.demo.repository.StoreRepository;
 import com.example.demo.service.PriceInfoService;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -21,27 +20,24 @@ public class PriceInfoServiceImpl implements PriceInfoService {
     private final PriceInfoRepository priceInfoRepository;
     private final ProductRepository productRepository;
     private final StoreRepository storeRepository;
-    private final ModelMapper modelMapper;
 
     public PriceInfoServiceImpl(
             PriceInfoRepository priceInfoRepository,
             ProductRepository productRepository,
-            StoreRepository storeRepository,
-            ModelMapper modelMapper
+            StoreRepository storeRepository
     ) {
         this.priceInfoRepository = priceInfoRepository;
         this.productRepository = productRepository;
         this.storeRepository = storeRepository;
-        this.modelMapper = modelMapper;
     }
 
     @Override
     public PriceInfoDTO create(PriceInfoDTO dto) {
         PriceInfo priceInfo = new PriceInfo();
 
-        Product product = productRepository.findById(dto.getProductId())
+        Product product = productRepository.findById(dto.getId())
                 .orElseThrow(() -> new RuntimeException("Product not found"));
-        Store store = storeRepository.findById(dto.getStoreId())
+        Store store = storeRepository.findById(dto.getId())
                 .orElseThrow(() -> new RuntimeException("Store not found"));
 
         priceInfo.setProduct(product);
@@ -49,7 +45,9 @@ public class PriceInfoServiceImpl implements PriceInfoService {
         priceInfo.setPrice(dto.getPrice());
         priceInfo.setDateTime(dto.getDateTime());
 
-        return modelMapper.map(priceInfoRepository.save(priceInfo), PriceInfoDTO.class);
+        priceInfo = priceInfoRepository.save(priceInfo);
+
+        return mapToDTO(priceInfo);
     }
 
     @Override
@@ -57,13 +55,15 @@ public class PriceInfoServiceImpl implements PriceInfoService {
         PriceInfo priceInfo = priceInfoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("PriceInfo not found"));
 
-        if (dto.getProductId() != null) {
-            Product product = productRepository.findById(dto.getProductId())
+        if (dto.getProductName() != null) {
+            // 依照商品名稱查找
+            Product product = productRepository.findByName(dto.getProductName())
                     .orElseThrow(() -> new RuntimeException("Product not found"));
             priceInfo.setProduct(product);
         }
-        if (dto.getStoreId() != null) {
-            Store store = storeRepository.findById(dto.getStoreId())
+        if (dto.getStoreName() != null) {
+            // 依照商店名稱查找
+            Store store = storeRepository.findByName(dto.getStoreName())
                     .orElseThrow(() -> new RuntimeException("Store not found"));
             priceInfo.setStore(store);
         }
@@ -74,7 +74,8 @@ public class PriceInfoServiceImpl implements PriceInfoService {
             priceInfo.setDateTime(dto.getDateTime());
         }
 
-        return modelMapper.map(priceInfoRepository.save(priceInfo), PriceInfoDTO.class);
+        priceInfo = priceInfoRepository.save(priceInfo);
+        return mapToDTO(priceInfo);
     }
 
     @Override
@@ -86,34 +87,47 @@ public class PriceInfoServiceImpl implements PriceInfoService {
     public PriceInfoDTO findById(Long id) {
         PriceInfo priceInfo = priceInfoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("PriceInfo not found"));
-        return modelMapper.map(priceInfo, PriceInfoDTO.class);
+        return mapToDTO(priceInfo);
     }
 
     @Override
     public List<PriceInfoDTO> findAll() {
         return priceInfoRepository.findAll().stream()
-                .map(entity -> modelMapper.map(entity, PriceInfoDTO.class))
+                .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<PriceInfoDTO> findByProductId(Long productId) {
         return priceInfoRepository.findByProductId(productId).stream()
-                .map(entity -> modelMapper.map(entity, PriceInfoDTO.class))
+                .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<PriceInfoDTO> findByStoreId(Long storeId) {
         return priceInfoRepository.findByStoreId(storeId).stream()
-                .map(entity -> modelMapper.map(entity, PriceInfoDTO.class))
+                .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<PriceInfoDTO> findByProductIdAndDateRange(Long productId, LocalDateTime start, LocalDateTime end) {
         return priceInfoRepository.findByProductIdAndDateTimeBetween(productId, start, end).stream()
-                .map(entity -> modelMapper.map(entity, PriceInfoDTO.class))
+                .map(this::mapToDTO)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * 將 PriceInfo entity 轉換為 PriceInfoDTO，帶出商品名稱與商店名稱
+     */
+    private PriceInfoDTO mapToDTO(PriceInfo priceInfo) {
+        PriceInfoDTO dto = new PriceInfoDTO();
+        dto.setId(priceInfo.getId());
+        dto.setProductName(priceInfo.getProduct() != null ? priceInfo.getProduct().getName() : null);
+        dto.setStoreName(priceInfo.getStore() != null ? priceInfo.getStore().getName() : null);
+        dto.setPrice(priceInfo.getPrice());
+        dto.setDateTime(priceInfo.getDateTime());
+        return dto;
     }
 }

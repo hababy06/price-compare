@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 function PriceInfoList() {
   const [data, setData] = useState([]);
   const [form, setForm] = useState({
-    productId: '',
-    storeId: '',
+    productName: '',
+    storeName: '',
     price: '',
     dateTime: ''
   });
@@ -29,7 +29,7 @@ function PriceInfoList() {
     axios.post('http://localhost:8080/api/price-infos', form)
       .then(res => {
         fetchData(); // 新增成功後刷新列表
-        setForm({productId:'', storeId:'', price:'', dateTime:''});
+        setForm({productName:'', storeName:'', price:'', dateTime:''});
       })
       .catch(err => alert('新增失敗！請檢查欄位與後端設定'));
   };
@@ -39,16 +39,16 @@ function PriceInfoList() {
       <h2>新增價格資訊</h2>
       <form onSubmit={handleSubmit} style={{marginBottom: '2rem'}}>
         <input
-          name="productId"
-          placeholder="產品ID"
-          value={form.productId}
+          name="productName"
+          placeholder="商品名稱"
+          value={form.productName}
           onChange={handleChange}
           required
         />
         <input
-          name="storeId"
-          placeholder="商店ID"
-          value={form.storeId}
+          name="storeName"
+          placeholder="商店名稱"
+          value={form.storeName}
           onChange={handleChange}
           required
         />
@@ -76,7 +76,7 @@ function PriceInfoList() {
         {data.length === 0 && <li>目前沒有資料</li>}
         {data.map(item => (
           <li key={item.id}>
-            ID: {item.id}，產品ID: {item.productId}，商店ID: {item.storeId}，價格: {item.price}，時間: {item.dateTime}
+            ID: {item.id}，商品名稱: {item.productName}，商店名稱: {item.storeName}，價格: {item.price}，時間: {item.dateTime}
           </li>
         ))}
       </ul>

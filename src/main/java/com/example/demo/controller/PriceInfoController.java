@@ -80,4 +80,11 @@ public class PriceInfoController {
         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end) {
         return priceInfoService.findByProductIdAndDateRange(productId, start, end);
     }
+    
+    @GetMapping("/search")
+    @Operation(summary = "依商品名稱搜尋價格資訊（價格排序）", description = "根據商品名稱（模糊比對）搜尋價格資訊，並依價格由小到大排序")
+    public List<PriceInfoDTO> searchByProductName(
+            @Parameter(description = "商品名稱（模糊查詢）", example = "可口可樂") @RequestParam String name) {
+        return priceInfoService.searchByProductNameOrderByPriceAsc(name);
+    }
 }

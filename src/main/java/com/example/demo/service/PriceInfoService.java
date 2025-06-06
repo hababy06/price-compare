@@ -14,4 +14,5 @@ public interface PriceInfoService {
     List<PriceInfoDTO> findByProductId(Long productId);
     List<PriceInfoDTO> findByStoreId(Long storeId);
     List<PriceInfoDTO> findByProductIdAndDateRange(Long productId, LocalDateTime start, LocalDateTime end);
+    List<PriceInfoDTO> searchByProductNameOrderByPriceAsc(String productName);
 }

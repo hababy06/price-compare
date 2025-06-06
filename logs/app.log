@@ -1286,3 +1286,120 @@ Caused by: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: In
 2025-06-06T15:43:26.873+08:00  INFO 860 --- [springboot-jpa] [RMI TCP Connection(213)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-06T15:43:26.874+08:00  INFO 860 --- [springboot-jpa] [RMI TCP Connection(213)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
 2025-06-06T15:43:26.877+08:00  INFO 860 --- [springboot-jpa] [RMI TCP Connection(213)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-06-06T16:26:27.854+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Starting PriceCompareApplication using Java 22.0.1 with PID 35364 (C:\eclipse-workspace\price-compare\target\classes started by user in C:\eclipse-workspace\price-compare)
+2025-06-06T16:26:27.857+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T16:26:27.923+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-06T16:26:27.923+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-06T16:26:29.240+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T16:26:29.335+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2025-06-06T16:26:30.102+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-06T16:26:30.126+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T16:26:30.127+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-06T16:26:30.216+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T16:26:30.217+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2293 ms
+2025-06-06T16:26:30.448+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T16:26:30.549+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-06T16:26:30.603+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T16:26:31.031+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T16:26:31.081+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-06T16:26:31.314+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f16ea47
+2025-06-06T16:26:31.317+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-06T16:26:31.461+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T16:26:32.720+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T16:26:32.833+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T16:26:33.474+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-06-06T16:26:34.034+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-06T16:26:34.093+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-06T16:26:34.104+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Started PriceCompareApplication in 6.957 seconds (process running for 8.009)
+2025-06-06T16:26:37.655+08:00  INFO 35364 --- [springboot-jpa] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-06T16:26:37.656+08:00  INFO 35364 --- [springboot-jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-06T16:26:37.657+08:00  INFO 35364 --- [springboot-jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-06T16:35:10.334+08:00  WARN 35364 --- [springboot-jpa] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-06-06T16:35:18.808+08:00  WARN 35364 --- [springboot-jpa] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-06-06T17:17:39.862+08:00  INFO 35364 --- [springboot-jpa] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1604 ms
+2025-06-06T17:37:02.643+08:00  INFO 35364 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-06T17:37:02.665+08:00  INFO 35364 --- [springboot-jpa] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T17:37:02.673+08:00  INFO 35364 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T17:37:02.697+08:00  INFO 35364 --- [springboot-jpa] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T17:37:02.740+08:00  INFO 35364 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-06T17:37:02.747+08:00  INFO 35364 --- [springboot-jpa] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-06T17:37:03.099+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Starting PriceCompareApplication using Java 22.0.1 with PID 35364 (C:\eclipse-workspace\price-compare\target\classes started by user in C:\eclipse-workspace\price-compare)
+2025-06-06T17:37:03.100+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T17:37:03.468+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T17:37:03.495+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2025-06-06T17:37:03.652+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-06T17:37:03.656+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T17:37:03.657+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-06T17:37:03.696+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T17:37:03.697+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 593 ms
+2025-06-06T17:37:03.757+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T17:37:03.764+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T17:37:03.784+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T17:37:03.787+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-06T17:37:03.795+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24826c50
+2025-06-06T17:37:03.796+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-06T17:37:03.798+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T17:37:03.998+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T17:37:04.069+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T17:37:04.207+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-06T17:37:04.945+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-06-06T17:37:05.124+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-06T17:37:05.141+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-06T17:37:05.150+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Started PriceCompareApplication in 2.114 seconds (process running for 4239.054)
+2025-06-06T17:37:05.154+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-06T17:42:53.383+08:00  INFO 35364 --- [springboot-jpa] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-06-06T17:42:53.385+08:00  INFO 35364 --- [springboot-jpa] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T17:42:53.406+08:00  INFO 35364 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T17:42:53.414+08:00  INFO 35364 --- [springboot-jpa] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T17:42:53.416+08:00  INFO 35364 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-06T17:42:53.443+08:00  INFO 35364 --- [springboot-jpa] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-06T17:42:53.851+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Starting PriceCompareApplication using Java 22.0.1 with PID 35364 (C:\eclipse-workspace\price-compare\target\classes started by user in C:\eclipse-workspace\price-compare)
+2025-06-06T17:42:53.852+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-06T17:42:54.242+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-06T17:42:54.266+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2025-06-06T17:42:54.390+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-06T17:42:54.391+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-06T17:42:54.392+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-06T17:42:54.440+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-06T17:42:54.440+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 584 ms
+2025-06-06T17:42:54.497+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-06T17:42:54.503+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-06T17:42:54.518+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-06T17:42:54.520+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-06-06T17:42:54.526+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c55541a
+2025-06-06T17:42:54.526+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-06-06T17:42:54.528+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-06T17:42:54.663+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-06T17:42:54.696+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T17:42:54.854+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-06-06T17:42:54.990+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-06T17:42:55.006+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-06T17:42:55.012+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] c.example.demo.PriceCompareApplication   : Started PriceCompareApplication in 1.438 seconds (process running for 4588.917)
+2025-06-06T17:42:55.016+08:00  INFO 35364 --- [springboot-jpa] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-06T17:42:56.844+08:00  INFO 35364 --- [springboot-jpa] [RMI TCP Connection(92)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-06T17:42:56.845+08:00  INFO 35364 --- [springboot-jpa] [RMI TCP Connection(92)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-06T17:42:56.851+08:00  INFO 35364 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-06T17:42:56.854+08:00  INFO 35364 --- [springboot-jpa] [RMI TCP Connection(92)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-06T17:42:56.855+08:00  INFO 35364 --- [springboot-jpa] [RMI TCP Connection(92)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-06-06T17:42:56.858+08:00  INFO 35364 --- [springboot-jpa] [RMI TCP Connection(92)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

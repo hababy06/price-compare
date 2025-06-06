@@ -130,4 +130,20 @@ public class PriceInfoServiceImpl implements PriceInfoService {
         dto.setDateTime(priceInfo.getDateTime());
         return dto;
     }
+    
+    @Override
+    public List<PriceInfoDTO> searchByProductNameOrderByPriceAsc(String productName) {
+        List<PriceInfo> infos = priceInfoRepository.findByProductNameLikeOrderByPriceAsc(productName);
+        return infos.stream().map(this::toDTO).collect(Collectors.toList());
+    }
+
+    private PriceInfoDTO toDTO(PriceInfo entity) {
+        PriceInfoDTO dto = new PriceInfoDTO();
+        dto.setId(entity.getId());
+        dto.setProductName(entity.getProduct().getName());
+        dto.setStoreName(entity.getStore().getName());
+        dto.setPrice(entity.getPrice());
+        dto.setDateTime(entity.getDateTime());
+        return dto;
+    }
 }

@@ -10,7 +10,7 @@ function Home() {
           <li><Link to="/price-list">價格列表</Link></li>
           <li><Link to="/csv-upload">CSV 匯入</Link></li>
           <li><Link to="/search">價格搜尋</Link></li>
-          <li><Link to="/add-price">新增價格</Link></li>
+          <li><Link to="/add-promotion">新增優惠</Link></li> {/* 確保新增優惠的連結存在 */}
         </ul>
       </nav>
     </div>

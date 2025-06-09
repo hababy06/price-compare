@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -86,5 +85,12 @@ public class PriceInfoController {
     public List<PriceInfoDTO> searchByProductName(
             @Parameter(description = "商品名稱（模糊查詢）", example = "可口可樂") @RequestParam String name) {
         return priceInfoService.searchByProductNameOrderByPriceAsc(name);
+    }
+
+    @GetMapping("/search/promotion")
+    @Operation(summary = "依商品名稱搜尋價格資訊（優惠排序）", description = "根據商品名稱（模糊比對）搜尋價格資訊，先顯示優惠後最低價，再來特殊優惠，最後原價")
+    public List<PriceInfoDTO> searchByProductNameOrderByPromotionAndPrice(
+            @Parameter(description = "商品名稱（模糊查詢）", example = "可口可樂") @RequestParam String name) {
+        return priceInfoService.searchByProductNameOrderByPromotionAndPrice(name);
     }
 }
